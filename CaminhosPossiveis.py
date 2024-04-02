@@ -197,13 +197,13 @@ if __name__ == "__main__":
         168: [162]
     }
 
-    grafo = Grafo(grafo_exemplo)
-    inicio = 1
-    destino = 2
-    caminhos = grafo.encontrar_caminhos(inicio, destino)
+grafo = Grafo(grafo_exemplo)
+inicio = 1
+destino = 2
+caminhos = grafo.encontrar_caminhos(inicio, destino)
 
-    for caminho in caminhos:
-        with open("./files/plan-traces.txt", "a") as arquivo:
-	        arquivo.write(":".join(map(str, caminho))+"\n")
+for caminho in caminhos:
+    with open("./files/plan-traces.txt", "a") as arquivo:
+        arquivo.write(":".join(map(str, caminho))+"\n")
 
 

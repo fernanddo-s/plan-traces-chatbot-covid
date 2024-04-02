@@ -335,28 +335,22 @@ dados_iniciais = {
     "168:162": "error-treatment",
 }
 
-# Função para extrair a ação correspondente a partir dos dados iniciais
 def extrair_acao(par):
     if par in dados_iniciais:
         return dados_iniciais[par]
     else:
         return "Action not found for {}".format(par)
 
-# Abre o arquivo para leitura
 with open('./files/plan-traces.txt', 'r') as arquivo:
-    # Itera sobre cada linha do arquivo
     count = 0
     for linha in arquivo:
-        # Divide a linha em substrings usando ":" como delimitador e converte cada substring em um número
         pares = [valor for valor in linha.strip().split(':')]
-        #colocar a linha qui
         with open("./files/plan-traces-with-actions.txt", "a") as arquivo:
             count+=1
             arquivo.write("\nPlan trace {}\n".format(count))
         for i in range(len(pares) - 1):
             par_atual = pares[i] + ":" + pares[i+1]
             acao = extrair_acao(par_atual)
-            # print(acao)
             with open("./files/plan-traces-with-actions.txt", "a") as arquivo:
                 arquivo.write("{}: {}\n".format(par_atual, acao))
 
