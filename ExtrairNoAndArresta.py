@@ -336,7 +336,6 @@ dados = """
 """
 
 nos = set()
-
 arestas = []
 
 for linha in dados.strip().split('\n'):
