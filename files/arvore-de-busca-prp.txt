@@ -1,0 +1,795 @@
+[show-welcome-message]
+- user-initiative
+- not(can-go-error-treatment)
+- not(goal)
+
+
+[ask-patient-symptoms]
+- can-do-ask-patient-symptoms
+- not(have-patient-days-symptoms)
+- not(have-patient-symptoms)
+- not(have-diagnostic-system-positive)
+- not(can-go-error-treatment)
+- not(goal)
+
+[ask-patient-how-many-days-symptoms]
+- have-patient-symptoms
+- can-do-ask-patient-how-many-days-symptoms
+- not(have-patient-days-symptoms)
+- not(have-diagnostic-system-positive)
+- not(can-go-error-treatment)
+- not(goal)
+
+[call-diagnostic-system]
+- have-patient-days-symptoms
+- have-patient-symptoms
+- can-call-diagnostic-system
+- not(have-diagnostic-system-positive)
+- not(can-go-error-treatment)
+- not(goal)
+
+[show-info-diagnostic-negative,             show-info-diagnostic-positive]
+- can-do-show-info-diagnostic-negative      - have-diagnostic-system-positive
+- not(can-go-error-treatment)               - can-do-show-info-diagnostic-positive
+- not(goal)                                 - not(have-patient-phone-number)
+                                            - not(have-patient-comorbidities)
+                                            - not(have-patient-birthday)
+                                            - not(have-patient-name)
+                                            - not(have-patient-cpf)
+                                            - not(have-patient-gender-f)
+                                            - not(have-patient-gender)
+                                            - not(have-patient-location)
+                                            - not(have-patient-postal-code)
+                                            - not(can-do-ask-postal-code)
+                                            - not(can-go-error-treatment)
+                                            - not(goal)
+
+[ask-user-grade]
+- can-show-ask-user-grade
+- not(can-go-error-treatment)
+- not(goal)
+
+[finish-service]
+- can-finish-service
+- not(goal)
+
+[goal]
+- goal
+
+
+goal d=0
+- goal()
+
+finish-service  d=1
+- can-finish-service()
+- not(goal())
+
+ask-user-grade  d=2
+- not(can-go-error-treatment())
+- can-show-ask-user-grade()
+- not(goal())
+
+error-treatment  d=3
+- can-go-error-treatment()
+- can-show-ask-user-grade()
+- not(goal())
+
+show-info-diagnostic-negative  d=3
+- can-do-show-info-diagnostic-negative()
+- not(can-go-error-treatment())
+- not(goal())
+
+health-agent-takes-control  d=3
+- can-do-human-take-control-dialog()
+- not(can-go-error-treatment())
+- not(goal())
+
+show-info-others d=3
+- can-show-info-others()
+- not(can-go-error-treatment())
+- not(goal())
+
+call-health-agent  d=4
+- can-call-health-agent()
+- not(can-go-error-treatment())
+- not(goal())
+
+ok start-dialog d=4
+- started()
+- not(can-go-error-treatment())
+- can-do-start-dialog()
+- not(goal())
+
+error-treatment d=4
+- can-show-info-others()
+- can-go-error-treatment()
+- not(goal())
+
+call-diagnostic-system d=4
+- have-patient-days-symptoms()
+- have-patient-symptoms()
+- not(have-diagnostic-system-positive())
+- can-call-diagnostic-system()
+- not(can-go-error-treatment())
+- not(goal())
+
+ok ask-patient-info-phone-number  d=5
+- not(have-patient-phone-number())
+- can-do-ask-patient-info-phone-number()
+- not(can-go-error-treatment())
+- not(goal())
+
+show-welcome-message d=5
+- user-initiative()
+- not(can-go-error-treatment())
+- not(goal())
+
+error-treatment d=5
+- started()
+- can-go-error-treatment()
+- can-do-start-dialog()
+- not(goal())
+
+show-info-mental-health d=5
+- started()
+- can-show-info-mental-health()
+- not(can-go-error-treatment())
+- not(can-back-dialog())
+- not(goal())
+
+ok show-info-about-covid d=5
+- started()
+- not(can-go-error-treatment())
+- can-show-info-about-covid()
+- not(goal())
+
+show-info-about-covid-in-ceara d=5
+- started()
+- can-show-info-covid-ce()
+- not(can-go-error-treatment())
+- not(goal())
+
+show-info-about-myths-and-truths d=5
+- started()
+- not(can-go-error-treatment())
+- can-show-info-myths-truths-covid()
+- not(goal())
+
+show-info-about-the-restrictions-to-buy d=5
+- started()
+- can-show-info-about-the-restrictions-to-buy()
+- not(can-go-error-treatment())
+- not(goal())
+
+ok show-info-about-covid-kill d=5
+- started()
+- can-show-info-about-covid-kill()
+- not(can-go-error-treatment())
+- not(goal())
+
+show-info-about-covid-survive-in-surface d=5
+- started()
+- can-show-info-about-covid-survive-in-surface()
+- not(can-go-error-treatment())
+- not(goal())
+
+show-info-about-medicine-for-covid d=5
+- started()
+- can-show-info-about-medicine-for-covid()
+- not(can-go-error-treatment())
+- not(goal())
+
+show-info-about-antibiotics-effects d=5
+- started()
+- can-show-info-about-antibiotics-effects()
+- not(can-go-error-treatment())
+- not(goal())
+
+show-info-about-people-affected-by-covid d=5
+- started()
+- can-show-info-about-people-affected-by-covid()
+- not(can-go-error-treatment())
+- not(goal())
+
+show-info-about-pets-spread-covid d=5
+- started()
+- can-show-info-about-pets-spread-covid()
+- not(can-go-error-treatment())
+- not(can-back-dialog())
+- not(goal())
+
+show-info-about-when-feel-the-symptoms d=5
+- started()
+- not(can-go-error-treatment())
+- can-show-info-when-feel-symptoms()
+- not(goal())
+
+show-info-about-the-cases-need-hospitalization d=5
+- started()
+- can-show-info-about-the-cases-need-hospitalization()
+- not(can-go-error-treatment())
+- not(goal())
+
+show-info-about-social-distancing d=5
+- started()
+- can-show-info-about-social-distancing()
+- not(can-go-error-treatment())
+- not(goal())
+
+show-info-about-when-home-isolation-is-necessasry d=5
+- started()
+- can-show-info-about-when-home-isolation-is-necessary()
+- not(can-go-error-treatment())
+- not(goal())
+
+show-info-about-home-isolation d=5
+- started()
+- can-show-info-about-home-isolation()
+- not(can-go-error-treatment())
+- not(goal())
+
+show-info-about-who-is-the-exam-for d=5
+- started()
+- can-show-info-about-who-is-the-exam-for()
+- not(goal())
+
+ok show-info-about-the-diagnostic-of-the-covid d=5
+- started()
+- can-show-info-about-the-diagnostic-of-the-covid()
+- not(can-go-error-treatment())
+- not(goal())
+
+show-info-about-where-to-get-care d=5
+- started()
+- can-show-info-about-where-to-get-care()
+- not(can-go-error-treatment())
+- not(goal())
+
+show-info-about-should-see-the-doctor d=5
+- started()
+- can-show-info-about-should-see-the-doctor()
+- not(can-go-error-treatment())
+- not(goal())
+
+show-info-about-the-riscs d=5
+- started()
+- can-show-info-riscs()
+- not(can-go-error-treatment())
+- not(goal())
+
+show-info-about-the-risk-group d=5
+- started()
+- can-show-info-about-the-risk-group()
+- not(can-go-error-treatment())
+- not(goal())
+
+show-info-about-worried-about-this-disease d=5
+- started()
+- can-show-info-about-worried-about-this-disease()
+- not(can-go-error-treatment())
+- not(goal())
+
+show-info-about-disease-transmitted-through-the-air d=5
+- started()
+- can-show-info-about-disease-transmitted-through-the-air()
+- not(can-go-error-treatment())
+- not(goal())
+
+show-info-about-disease-spread d=5
+- started()
+- can-show-info-about-disease-spread()
+- not(can-go-error-treatment())
+- not(goal())
+
+show-info-about-disease-present-itself d=5
+- started()
+- can-show-info-about-disease-present-itself()
+- not(can-go-error-treatment())
+- not(goal())
+
+show-info-about-the-treatments d=5
+- started()
+- can-show-info-treatments()
+- not(can-go-error-treatment())
+- not(goal())
+
+ok show-info-about-main-symptoms d=5
+- started()
+- can-show-info-main-symptoms()
+- not(can-go-error-treatment())
+- not(goal())
+
+show-info-about-how-to-protect-from-virus d=5
+- started()
+- not(can-go-error-treatment())
+- can-show-info-protect()
+- not(goal())
+
+show-info-about-health-professional-protection d=5
+- started()
+- can-show-info-about-health-professional-protection()
+- not(can-go-error-treatment())
+- not(goal())
+
+show-info-about-wash-hands-correctly d=5
+- started()
+- can-show-info-about-wash-hands-correctly()
+- not(can-go-error-treatment())
+- not(goal())
+
+show-info-about-homemade-mask-use d=5
+- started()
+- can-show-info-about-homemade-mask-use()
+- not(can-go-error-treatment())
+- not(goal())
+
+show-info-about-homemade-mask-look-like d=5
+- started()
+- can-show-info-about-homemade-mask-look-like()
+- not(can-go-error-treatment())
+- not(goal())
+
+show-info-about-wear-mask d=5
+- started()
+- can-show-info-about-wear-mask()
+- not(can-go-error-treatment())
+- not(goal())
+
+show-info-about-main-prevention-measure d=5
+- started()
+- can-show-info-about-main-prevention-measure()
+- not(can-go-error-treatment())
+- not(goal())
+
+show-info-about-new-corona-virus d=5
+- started()
+- can-show-info-new-coronavirus()
+- not(can-go-error-treatment())
+- not(goal())
+
+ask-patient-how-many-days-symptoms d=5
+- not(have-patient-days-symptoms())
+- have-patient-symptoms()
+- not(have-diagnostic-system-positive())
+- can-do-ask-patient-how-many-days-symptoms()
+- not(can-go-error-treatment())
+- not(goal())
+
+error-treatment d=6
+- started()
+- can-show-info-mental-health()
+- can-go-error-treatment()
+- not(can-back-dialog())
+- not(goal())
+
+error-treatment d=6
+- started()
+- can-show-info-covid-ce()
+- can-go-error-treatment()
+- not(goal())
+
+error-treatment d=6
+- started()
+- can-go-error-treatment()
+- can-show-info-myths-truths-covid()
+- not(goal())
+
+error-treatment d=6
+- started()
+- can-show-info-about-the-restrictions-to-buy()
+- can-go-error-treatment()
+- not(goal())
+
+error-treatment d=6
+- started()
+- can-show-info-about-covid-kill()
+- can-go-error-treatment()
+- not(goal())
+
+error-treatment d=6
+- started()
+- can-show-info-about-covid-survive-in-surface()
+- can-go-error-treatment()
+- not(goal())
+
+error-treatment d=6
+- started()
+- can-show-info-about-medicine-for-covid()
+- can-go-error-treatment()
+- not(goal())
+
+error-treatment d=6
+- started()
+- can-show-info-about-antibiotics-effects()
+- can-go-error-treatment()
+- not(goal())
+
+error-treatment d=6
+- started()
+- can-show-info-about-people-affected-by-covid()
+- can-go-error-treatment()
+- not(goal())
+
+error-treatment d=6
+- started()
+- can-show-info-about-pets-spread-covid()
+- can-go-error-treatment()
+- not(can-back-dialog())
+- not(goal())
+
+ok error-treatment d=6
+- started()
+- can-go-error-treatment()
+- can-show-info-when-feel-symptoms()
+- not(goal())
+
+error-treatment d=6
+- started()
+- can-show-info-about-the-cases-need-hospitalization()
+- can-go-error-treatment()
+- not(goal())
+
+error-treatment d=6
+- started()
+- can-show-info-about-social-distancing()
+- can-go-error-treatment()
+- not(goal())
+
+error-treatment d=6
+- started()
+- can-show-info-about-when-home-isolation-is-necessary()
+- can-go-error-treatment()
+- not(goal())
+
+error-treatment d=6
+- started()
+- can-show-info-about-home-isolation()
+- can-go-error-treatment()
+- not(goal())
+
+ok error-treatment d=6
+- started()
+- can-show-info-about-the-diagnostic-of-the-covid()
+- can-go-error-treatment()
+- not(goal())
+
+error-treatment d=6
+- started()
+- can-show-info-about-where-to-get-care()
+- can-go-error-treatment()
+- not(goal())
+
+error-treatment d=6
+- started()
+- can-show-info-about-should-see-the-doctor()
+- can-go-error-treatment()
+- not(goal())
+
+error-treatment d=6
+- started()
+- can-show-info-riscs()
+- can-go-error-treatment()
+- not(goal())
+
+error-treatment d=6
+- started()
+- can-show-info-about-the-risk-group()
+- can-go-error-treatment()
+- not(goal())
+
+error-treatment d=6
+- started()
+- can-show-info-about-worried-about-this-disease()
+- can-go-error-treatment()
+- not(goal())
+
+error-treatment d=6
+- started()
+- can-show-info-about-disease-transmitted-through-the-air()
+- can-go-error-treatment()
+- not(goal())
+
+error-treatment d=6
+- started()
+- can-show-info-about-disease-spread()
+- can-go-error-treatment()
+- not(goal())
+
+error-treatment d=6
+- started()
+- can-show-info-about-disease-present-itself()
+- can-go-error-treatment()
+- not(goal())
+
+error-treatment d=6
+- started()
+- can-show-info-treatments()
+- can-go-error-treatment()
+- not(goal())
+
+error-treatment d=6
+- started()
+- can-show-info-main-symptoms()
+- can-go-error-treatment()
+- not(goal())
+
+error-treatment d=6
+- started()
+- can-go-error-treatment()
+- can-show-info-about-covid()
+- not(goal())
+
+error-treatment d=6
+- started()
+- can-go-error-treatment()
+- can-show-info-protect()
+- not(goal())
+
+error-treatment d=6
+- started()
+- can-show-info-about-health-professional-protection()
+- can-go-error-treatment()
+- not(goal())
+
+error-treatment d=6
+- started()
+- can-show-info-about-wash-hands-correctly()
+- can-go-error-treatment()
+- not(goal())
+
+error-treatment d=6
+- started()
+- can-show-info-about-homemade-mask-use()
+- can-go-error-treatment()
+- not(goal())
+
+error-treatment d=6
+- started()
+- can-show-info-about-homemade-mask-look-like()
+- can-go-error-treatment()
+- not(goal())
+
+error-treatment d=6
+- started()
+- can-show-info-about-wear-mask()
+- can-go-error-treatment()
+- not(goal())
+
+error-treatment d=6
+- started()
+- can-show-info-about-main-prevention-measure()
+- can-go-error-treatment()
+- not(goal())
+
+error-treatment d=6
+- started()
+- can-show-info-new-coronavirus()
+- can-go-error-treatment()
+- not(goal())
+
+ask-patient-symptoms d=6
+- not(have-patient-days-symptoms())
+- not(have-patient-symptoms())
+- not(have-diagnostic-system-positive())
+- can-do-ask-patient-symptoms()
+- not(can-go-error-treatment())
+- not(goal())
+
+ask-patient-info-gender d=6
+- not(have-patient-phone-number())
+- can-do-ask-patient-info-gender()
+- not(have-patient-gender-f())
+- not(have-patient-gender())
+- not(can-go-error-treatment())
+- not(goal())
+
+error-treatment d=6
+- not(have-patient-days-symptoms())
+- have-patient-symptoms()
+- not(have-diagnostic-system-positive())
+- can-do-ask-patient-how-many-days-symptoms()
+- can-go-error-treatment()
+- not(goal())
+
+error-treatment  d=6
+- not(have-patient-phone-number())
+- can-do-ask-patient-info-phone-number()
+- can-go-error-treatment()
+- not(goal())
+
+ask-patient-info-pregmant-woman  d=6
+- not(have-patient-phone-number())
+- have-patient-gender-f()
+- can-do-ask-patient-info-pregnant-woman()
+- not(have-patient-pregnant-info())
+- not(can-go-error-treatment())
+- not(goal())
+
+start-online-service d=7
+- not(have-patient-days-symptoms())
+- not(have-patient-symptoms())
+- not(have-diagnostic-system-positive())
+- can-start-online-service()
+- not(can-go-error-treatment())
+- not(goal())
+
+ask-patient-comorbidities d=7
+- not(have-patient-phone-number())
+- not(have-patient-comorbidities())
+- can-do-ask-patient-comorbidities()
+- not(have-patient-gender-f())
+- not(have-patient-gender())
+- not(can-go-error-treatment())
+- not(goal())
+
+error-treatment d=7
+- not(have-patient-phone-number())
+- can-do-ask-patient-info-gender()
+- not(have-patient-gender-f())
+- not(have-patient-gender())
+- can-go-error-treatment()
+- not(goal())
+
+error-treatment d=7
+- not(have-patient-days-symptoms())
+- not(have-patient-symptoms())
+- not(have-diagnostic-system-positive())
+- can-do-ask-patient-symptoms()
+- can-go-error-treatment()
+- not(goal())
+
+error-treatment d=7
+- not(have-patient-phone-number())
+- have-patient-gender-f()
+- can-do-ask-patient-info-pregnant-woman()
+- not(have-patient-pregnant-info())
+- can-go-error-treatment()
+- not(goal())
+
+ask-patient-info-birthday d=8
+- not(have-patient-phone-number())
+- not(have-patient-comorbidities())
+- not(have-patient-birthday())
+- not(have-patient-gender-f())
+- not(have-patient-gender())
+- can-do-ask-patient-info-birthday()
+- not(can-go-error-treatment())
+- not(goal())
+
+error-treatment d=8
+- not(have-patient-phone-number())
+- not(have-patient-comorbidities())
+- can-do-ask-patient-comorbidities()
+- not(have-patient-gender-f())
+- not(have-patient-gender())
+- can-go-error-treatment()
+- not(goal())
+
+ask-patient-info-name d=9
+- not(have-patient-phone-number())
+- not(have-patient-comorbidities())
+- not(have-patient-birthday())
+- not(have-patient-name())
+- not(have-patient-gender-f())
+- can-do-ask-patient-info-name()
+- not(have-patient-gender())
+- not(can-go-error-treatment())
+- not(goal())
+
+error-treatment d=9
+- not(have-patient-phone-number())
+- not(have-patient-comorbidities())
+- not(have-patient-birthday())
+- not(have-patient-gender-f())
+- not(have-patient-gender())
+- can-do-ask-patient-info-birthday()
+- can-go-error-treatment()
+- not(goal())
+
+ask-patient-info-cpf d=10
+- not(have-patient-phone-number())
+- not(have-patient-comorbidities())
+- not(have-patient-birthday())
+- not(have-patient-name())
+- not(have-patient-cpf())
+- can-do-ask-patient-info-cpf()
+- not(have-patient-gender-f())
+- not(have-patient-gender())
+- not(can-go-error-treatment())
+- not(goal())
+
+error-treatment d=10
+- not(have-patient-phone-number())
+- not(have-patient-comorbidities())
+- not(have-patient-birthday())
+- not(have-patient-name())
+- not(have-patient-gender-f())
+- can-do-ask-patient-info-name()
+- not(have-patient-gender())
+- can-go-error-treatment()
+- not(goal())
+
+show-info-calling-health-profitional d=11
+- not(have-patient-phone-number())
+- not(have-patient-comorbidities())
+- not(have-patient-birthday())
+- not(have-patient-name())
+- not(have-patient-cpf())
+- not(have-patient-gender-f())
+- not(have-patient-gender())
+- can-show-info-calling-health-profitional()
+- not(can-go-error-treatment())
+- not(goal())
+
+ok error-treatment d=11
+- not(have-patient-phone-number())
+- not(have-patient-comorbidities())
+- not(have-patient-birthday())
+- not(have-patient-name())
+- not(have-patient-cpf())
+- can-do-ask-patient-info-cpf()
+- not(have-patient-gender-f())
+- not(have-patient-gender())
+- can-go-error-treatment()
+- not(goal())
+
+ask-share-location d=12
+- not(have-patient-phone-number())
+- not(have-patient-comorbidities())
+- not(have-patient-birthday())
+- not(have-patient-name())
+- not(have-patient-cpf())
+- not(have-patient-gender-f())
+- not(have-patient-gender())
+- not(have-patient-location())
+- not(have-patient-postal-code())
+- not(can-do-ask-postal-code())
+- can-do-ask-share-location()
+- not(can-go-error-treatment())
+- not(goal())
+
+ask-postal-code d=12
+- not(have-patient-phone-number())
+- not(have-patient-comorbidities())
+- not(have-patient-birthday())
+- not(have-patient-name())
+- not(have-patient-cpf())
+- not(have-patient-gender-f())
+- not(have-patient-gender())
+- not(have-patient-location())
+- not(have-patient-postal-code())
+- can-do-ask-postal-code()
+- not(can-do-ask-share-location())
+- not(can-go-error-treatment())
+- not(goal())
+
+show-info-diagnostic-positive d=13
+- not(have-patient-phone-number())
+- not(have-patient-comorbidities())
+- not(have-patient-birthday())
+- not(have-patient-name())
+- not(have-patient-cpf())
+- have-diagnostic-system-positive()
+- not(have-patient-gender-f())
+- not(have-patient-gender())
+- can-do-show-info-diagnostic-positive()
+- not(have-patient-location())
+- not(have-patient-postal-code())
+- not(can-do-ask-postal-code())
+- not(can-go-error-treatment())
+- not(goal())
+
+error-treatment d=13
+- not(have-patient-phone-number())
+- not(have-patient-comorbidities())
+- not(have-patient-birthday())
+- not(have-patient-name())
+- not(have-patient-cpf())
+- not(have-patient-gender-f())
+- not(have-patient-gender())
+- not(have-patient-location())
+- not(have-patient-postal-code())
+- can-do-ask-postal-code()
+- not(can-do-ask-share-location())
+- can-go-error-treatment()
+- not(goal())
