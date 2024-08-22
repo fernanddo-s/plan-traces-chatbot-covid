@@ -1,0 +1,335 @@
+1: user-initiative()/not(can-go-error-treatment())/not(goal())
+
+2: goal()
+
+3: started()/not(can-go-error-treatment())/can-do-start-dialog()/not(goal())
+
+4: not(have-patient-days-symptoms())/not(have-patient-symptoms())/not(have-diagnostic-system-positive())/can-start-online-service()/not(can-go-error-treatment())/not(goal())
+
+5: started()/not(can-go-error-treatment())/can-show-info-about-covid()/can-show-info-covid-ce()/can-show-info-about-covid-kill()/can-show-info-about-covid-survive-in-surface()/not(goal())
+
+6: started()/can-show-info-mental-health()/not(can-go-error-treatment())/not(can-back-dialog())/not(goal())
+
+7: can-show-info-others()/not(can-go-error-treatment())/not(goal())
+
+8: started()/can-go-error-treatment()/can-do-start-dialog()/not(goal())
+
+9: not(have-patient-days-symptoms())/not(have-patient-symptoms())/not(have-diagnostic-system-positive())/can-do-ask-patient-symptoms()/not(can-go-error-treatment())/not(goal())
+
+10: started()/can-show-info-new-coronavirus()/not(can-go-error-treatment())/not(goal())
+
+11: started()/not(can-go-error-treatment())/can-show-info-protect()/not(goal())
+
+12: started()/can-show-info-main-symptoms()/not(can-go-error-treatment())/not(goal())
+
+13: started()/can-show-info-treatments()/not(can-go-error-treatment())/not(goal())
+
+14: started()/can-show-info-riscs()/not(can-go-error-treatment())/not(goal())
+
+15: started()/not(can-go-error-treatment())/can-show-info-when-feel-symptoms()/not(goal())
+
+16: started()/not(can-go-error-treatment())/can-show-info-myths-truths-covid()/not(goal())
+
+17: started()/can-show-info-covid-ce()/not(can-go-error-treatment())/not(goal())
+
+18: not(can-go-error-treatment())/can-show-ask-user-grade()/not(goal())
+
+19: started()/not(can-go-error-treatment())/can-do-start-dialog()/not(goal())
+
+20: started()/can-go-error-treatment()/can-show-info-about-covid()/not(goal())
+
+21: started()/can-show-info-mental-health()/can-go-error-treatment()/not(can-back-dialog())/not(goal())
+
+22: can-show-info-others()/can-go-error-treatment()/not(goal())
+
+23: not(have-patient-days-symptoms())/have-patient-symptoms()/not(have-diagnostic-system-positive())/can-do-ask-patient-how-many-days-symptoms()/not(can-go-error-treatment())/not(goal())
+
+24: not(have-patient-days-symptoms())/not(have-patient-symptoms())/not(have-diagnostic-system-positive())/can-do-ask-patient-symptoms()/can-go-error-treatment()/not(goal())
+
+25: *
+
+26: started()/can-show-info-about-main-prevention-measure()/not(can-go-error-treatment())/not(goal())
+
+27: started()/can-show-info-about-wear-mask()/not(can-go-error-treatment())/not(goal())
+
+28: started()/can-show-info-about-homemade-mask-look-like()/not(can-go-error-treatment())/not(goal())
+
+29: started()/can-show-info-about-homemade-mask-use()/not(can-go-error-treatment())/not(goal())
+
+30: started()/can-show-info-about-wash-hands-correctly()/not(can-go-error-treatment())/not(goal())
+
+31: started()/can-show-info-about-health-professional-protection()/not(can-go-error-treatment())/not(goal())
+
+32: *
+
+33: *
+
+34: *
+
+35: started()/can-show-info-about-disease-present-itself()/not(can-go-error-treatment())/not(goal())
+
+36: started()/can-show-info-about-disease-spread()/not(can-go-error-treatment())/not(goal())
+
+37: started()/can-show-info-about-disease-transmitted-through-the-air()/not(can-go-error-treatment())/not(goal())
+
+38: started()/can-show-info-about-worried-about-this-disease()/not(can-go-error-treatment())/not(goal())
+
+39: started()/can-show-info-about-the-risk-group()/not(can-go-error-treatment())/not(goal())
+
+40: *
+
+41: started()/can-show-info-about-should-see-the-doctor()/not(can-go-error-treatment())/not(goal())
+
+42: started()/can-show-info-about-where-to-get-care()/not(can-go-error-treatment())/not(goal())
+
+43: started()/can-show-info-about-the-diagnostic-of-the-covid()/not(can-go-error-treatment())/not(goal())
+
+44: started()/can-show-info-about-who-is-the-exam-for()/not(goal())
+
+45: started()/can-show-info-about-home-isolation()/not(can-go-error-treatment())/not(goal())
+
+46: started()/can-show-info-about-when-home-isolation-is-necessary()/not(can-go-error-treatment())/not(goal())
+
+47: started()/can-show-info-about-social-distancing()/not(can-go-error-treatment())/not(goal())
+
+48: started()/can-show-info-about-the-cases-need-hospitalization()/not(can-go-error-treatment())/not(goal())
+
+49: *
+
+50: started()/can-show-info-about-pets-spread-covid()/not(can-go-error-treatment())/not(can-back-dialog())/not(goal())
+
+51: tarted()/can-show-info-about-people-affected-by-covid()/not(can-go-error-treatment())/not(goal())
+
+52: started()/can-show-info-about-antibiotics-effects()/not(can-go-error-treatment())/not(goal())
+
+53: started()/can-show-info-about-medicine-for-covid()/not(can-go-error-treatment())/not(goal())
+
+54: started()/can-show-info-about-covid-survive-in-surface()/not(can-go-error-treatment())/not(goal())
+
+55: started()/can-show-info-about-covid-kill()/not(can-go-error-treatment())/not(goal())
+
+56: started()/can-show-info-about-the-restrictions-to-buy()/not(can-go-error-treatment())/not(goal())
+
+57: *
+
+58: *
+
+59: can-finish-service()/not(goal())
+
+60: can-go-error-treatment()/can-show-ask-user-grade()/not(goal())
+
+61: started()/can-go-error-treatment()/can-do-start-dialog()/not(goal())
+
+62: have-patient-days-symptoms()/have-patient-symptoms()/not(have-diagnostic-system-positive())/can-call-diagnostic-system()/not(can-go-error-treatment())/not(goal())
+
+63: not(have-patient-days-symptoms())/have-patient-symptoms()/not(have-diagnostic-system-positive())/can-do-ask-patient-how-many-days-symptoms()/can-go-error-treatment()/not(goal())
+
+64: started()/can-show-info-about-main-prevention-measure()/can-go-error-treatment()/not(goal())
+
+65: started()/can-show-info-about-wear-mask()/can-go-error-treatment()/not(goal())
+
+66: started()/can-show-info-about-homemade-mask-look-like()/can-go-error-treatment()/not(goal())
+
+67: started()/can-show-info-about-homemade-mask-use()/can-go-error-treatment()/not(goal())
+
+68: started()/can-show-info-about-wash-hands-correctly()/can-go-error-treatment()/not(goal())
+
+69: started()/can-show-info-about-health-professional-protection()/can-go-error-treatment()/not(goal())
+
+70: started()/can-show-info-about-disease-present-itself()/can-go-error-treatment()/not(goal())
+
+71: started()/can-show-info-about-disease-spread()/can-go-error-treatment()/not(goal())
+
+72: started()/can-show-info-about-disease-transmitted-through-the-air()/can-go-error-treatment()/not(goal())
+
+73: started()/can-show-info-about-worried-about-this-disease()/can-go-error-treatment()/not(goal())
+
+74: started()/can-show-info-about-the-risk-group()/can-go-error-treatment()/not(goal())
+
+75: started()/can-show-info-about-should-see-the-doctor()/can-go-error-treatment()/not(goal())
+
+76: started()/can-show-info-about-where-to-get-care()/can-go-error-treatment()/not(goal())
+
+77: started()/can-show-info-about-the-diagnostic-of-the-covid()/can-go-error-treatment()/not(goal())
+
+78: started()/can-show-info-about-who-is-the-exam-for()/not(goal())
+
+79: started()/can-show-info-about-home-isolation()/can-go-error-treatment()/not(goal())
+
+80: *
+
+81: not(can-go-error-treatment())/can-show-ask-user-grade()/not(goal())
+
+82: started()/can-show-info-about-social-distancing()/can-go-error-treatment()/not(goal())
+
+83: started()/can-show-info-about-the-cases-need-hospitalization()/can-go-error-treatment()/not(goal())
+
+84: started()/can-show-info-about-pets-spread-covid()/can-go-error-treatment()/not(can-back-dialog())/not(goal())
+
+85: started()/can-show-info-about-people-affected-by-covid()/can-go-error-treatment()/not(goal())
+
+86: started()/can-show-info-about-antibiotics-effects()/can-go-error-treatment()/not(goal())
+
+87: started()/can-show-info-about-medicine-for-covid()/can-go-error-treatment()/not(goal())
+
+88: started()/can-show-info-about-covid-survive-in-surface()/can-go-error-treatment()/not(goal())
+
+89: started()/can-show-info-about-covid-kill()/can-go-error-treatment()/not(goal())
+
+90: started()/can-show-info-about-the-restrictions-to-buy()/can-go-error-treatment()/not(goal())
+
+91: not(have-patient-phone-number())/not(have-patient-comorbidities())/not(have-patient-birthday())/not(have-patient-name())/not(have-patient-cpf())/have-diagnostic-system-positive()/not(have-patient-gender-f())/not(have-patient-gender())/can-do-show-info-diagnostic-positive()/not(have-patient-location())/not(have-patient-postal-code())/not(can-do-ask-postal-code())/not(can-go-error-treatment())/not(goal())
+
+92: can-do-show-info-diagnostic-negative()/not(can-go-error-treatment())/not(goal())
+
+93: can-finish-service()/not(goal())
+
+94: can-go-error-treatment()/can-show-ask-user-grade()/not(goal())
+
+95: not(have-patient-phone-number())/not(have-patient-comorbidities())/not(have-patient-birthday())/not(have-patient-name())/not(have-patient-cpf())/not(have-patient-gender-f())/not(have-patient-gender())/not(have-patient-location())/not(have-patient-postal-code())/not(can-do-ask-postal-code())/can-do-ask-share-location()/not(can-go-error-treatment())/not(goal())
+
+96: not(can-go-error-treatment())/can-show-ask-user-grade()/not(goal())
+
+97: not(have-patient-phone-number())/not(have-patient-comorbidities())/not(have-patient-birthday())/not(have-patient-name())/not(have-patient-cpf())/not(have-patient-gender-f())/not(have-patient-gender())/not(have-patient-location())/not(have-patient-postal-code())/can-do-ask-postal-code()/not(can-do-ask-share-location())/not(can-go-error-treatment())/not(goal())
+
+98: not(have-patient-phone-number())/not(have-patient-comorbidities())/not(have-patient-birthday())/not(have-patient-name())/not(have-patient-cpf())/not(have-patient-gender-f())/not(have-patient-gender())/can-show-info-calling-health-profitional()/not(can-go-error-treatment())/not(goal())
+
+99: can-finish-service()/not(goal())
+
+100: can-go-error-treatment()/can-show-ask-user-grade()/not(goal())
+
+101: not(have-patient-phone-number())/not(have-patient-comorbidities())/not(have-patient-birthday())/not(have-patient-name())/not(have-patient-cpf())/not(have-patient-gender-f())/not(have-patient-gender())/can-show-info-calling-health-profitional()/not(can-go-error-treatment())/not(goal())
+
+102: not(have-patient-phone-number())/not(have-patient-comorbidities())/not(have-patient-birthday())/not(have-patient-name())/not(have-patient-cpf())/not(have-patient-gender-f())/not(have-patient-gender())/not(have-patient-location())/not(have-patient-postal-code())/can-do-ask-postal-code()/not(can-do-ask-share-location())/can-go-error-treatment()/not(goal())
+
+103: not(have-patient-phone-number())/not(have-patient-comorbidities())/not(have-patient-birthday())/not(have-patient-name())/not(have-patient-cpf())/can-do-ask-patient-info-cpf()/not(have-patient-gender-f())/not(have-patient-gender())/not(can-go-error-treatment())/not(goal())
+
+104: not(have-patient-phone-number())/not(have-patient-comorbidities())/not(have-patient-birthday())/not(have-patient-name())/not(have-patient-cpf())/can-do-ask-patient-info-cpf()/not(have-patient-gender-f())/not(have-patient-gender())/not(can-go-error-treatment())/not(goal())
+
+105: not(have-patient-phone-number())/not(have-patient-comorbidities())/not(have-patient-birthday())/not(have-patient-name())/not(have-patient-gender-f())/can-do-ask-patient-info-name()/not(have-patient-gender())/not(can-go-error-treatment())/not(goal())
+
+106: not(have-patient-phone-number())/not(have-patient-comorbidities())/not(have-patient-birthday())/not(have-patient-name())/not(have-patient-cpf())/can-do-ask-patient-info-cpf()/not(have-patient-gender-f())/not(have-patient-gender())/can-go-error-treatment()/not(goal())
+
+107: not(have-patient-phone-number())/not(have-patient-comorbidities())/not(have-patient-birthday())/not(have-patient-name())/not(have-patient-gender-f())/can-do-ask-patient-info-name()/not(have-patient-gender())/not(can-go-error-treatment())/not(goal())
+
+108: not(have-patient-phone-number())/not(have-patient-comorbidities())/not(have-patient-birthday())/not(have-patient-name())/not(have-patient-cpf())/can-do-ask-patient-info-cpf()/not(have-patient-gender-f())/not(have-patient-gender())/can-go-error-treatment()/not(goal())
+
+109: not(have-patient-phone-number())/not(have-patient-comorbidities())/not(have-patient-birthday())/not(have-patient-gender-f())/not(have-patient-gender())/can-do-ask-patient-info-birthday()/not(can-go-error-treatment())/not(goal())
+
+110: not(have-patient-phone-number())/not(have-patient-comorbidities())/not(have-patient-birthday())/not(have-patient-name())/not(have-patient-gender-f())/can-do-ask-patient-info-name()/not(have-patient-gender())/can-go-error-treatment()/not(goal())
+
+111: not(have-patient-phone-number())/not(have-patient-comorbidities())/not(have-patient-birthday())/not(have-patient-gender-f())/not(have-patient-gender())/can-do-ask-patient-info-birthday()/not(can-go-error-treatment())/not(goal())
+
+112: not(have-patient-phone-number())/not(have-patient-comorbidities())/not(have-patient-birthday())/not(have-patient-name())/not(have-patient-gender-f())/can-do-ask-patient-info-name()/not(have-patient-gender())/can-go-error-treatment()/not(goal())
+
+113: not(have-patient-phone-number())/not(have-patient-comorbidities())/can-do-ask-patient-comorbidities()/not(have-patient-gender-f())/not(have-patient-gender())/not(can-go-error-treatment())/not(goal())
+
+114: not(have-patient-phone-number())/not(have-patient-comorbidities())/not(have-patient-birthday())/not(have-patient-gender-f())/not(have-patient-gender())/can-do-ask-patient-info-birthday()/can-go-error-treatment()/not(goal())
+
+115: not(have-patient-phone-number())/not(have-patient-comorbidities())/can-do-ask-patient-comorbidities()/not(have-patient-gender-f())/not(have-patient-gender())/not(can-go-error-treatment())/not(goal())
+
+116: not(have-patient-phone-number())/not(have-patient-comorbidities())/not(have-patient-birthday())/not(have-patient-gender-f())/not(have-patient-gender())/can-do-ask-patient-info-birthday()/can-go-error-treatment()/not(goal())
+
+117: not(have-patient-phone-number())/can-do-ask-patient-info-gender()/not(have-patient-gender-f())/not(have-patient-gender())/not(can-go-error-treatment())/not(goal())
+
+118: not(have-patient-phone-number())/not(have-patient-comorbidities())/can-do-ask-patient-comorbidities()/not(have-patient-gender-f())/not(have-patient-gender())/can-go-error-treatment()/not(goal())
+
+119: not(have-patient-phone-number())/can-do-ask-patient-info-gender()/not(have-patient-gender-f())/not(have-patient-gender())/not(can-go-error-treatment())/not(goal())
+
+120: not(have-patient-phone-number())/not(have-patient-comorbidities())/can-do-ask-patient-comorbidities()/not(have-patient-gender-f())/not(have-patient-gender())/can-go-error-treatment()/not(goal())
+
+121: not(have-patient-phone-number())/can-do-ask-patient-info-phone-number()/not(can-go-error-treatment())/not(goal())
+
+122: not(have-patient-phone-number())/have-patient-gender-f()/can-do-ask-patient-info-pregnant-woman()/not(have-patient-pregnant-info())/not(can-go-error-treatment())/not(goal())
+
+123: not(have-patient-phone-number())/can-do-ask-patient-info-phone-number()/not(can-go-error-treatment())/not(goal())
+
+124: not(have-patient-phone-number())/can-do-ask-patient-info-gender()/not(have-patient-gender-f())/not(have-patient-gender())/can-go-error-treatment()/not(goal())
+
+125: not(have-patient-phone-number())/can-do-ask-patient-info-phone-number()/not(can-go-error-treatment())/not(goal())
+
+126: not(have-patient-phone-number())/have-patient-gender-f()/can-do-ask-patient-info-pregnant-woman()/not(have-patient-pregnant-info())/not(can-go-error-treatment())/not(goal())
+
+127: not(have-patient-phone-number())/can-do-ask-patient-info-phone-number()/not(can-go-error-treatment())/not(goal())
+
+128: not(have-patient-phone-number())/can-do-ask-patient-info-gender()/not(have-patient-gender-f())/not(have-patient-gender())/can-go-error-treatment()/not(goal())
+
+129: can-call-health-agent()/not(can-go-error-treatment())/not(goal())
+
+130: not(have-patient-phone-number())/can-do-ask-patient-info-phone-number()/can-go-error-treatment()/not(goal())
+
+131: not(have-patient-phone-number())/can-do-ask-patient-info-phone-number()/not(can-go-error-treatment())/not(goal())
+
+132: *
+
+133: can-call-health-agent()/not(can-go-error-treatment())/not(goal())
+
+134: not(have-patient-phone-number())/can-do-ask-patient-info-phone-number()/can-go-error-treatment()/not(goal())
+
+135: can-call-health-agent()/not(can-go-error-treatment())/not(goal())
+
+136: not(have-patient-phone-number())/can-do-ask-patient-info-phone-number()/can-go-error-treatment()/not(goal())
+
+137: not(have-patient-phone-number())/can-do-ask-patient-info-phone-number()/not(can-go-error-treatment())/not(goal())
+
+138: *
+
+139: can-call-health-agent()/not(can-go-error-treatment())/not(goal())
+
+140: not(have-patient-phone-number())/can-do-ask-patient-info-phone-number()/can-go-error-treatment()/not(goal())
+
+141: can-do-human-take-control-dialog()/not(can-go-error-treatment())/not(goal())
+
+142: can-call-health-agent()/not(can-go-error-treatment())/not(goal())
+
+143: not(have-patient-phone-number())/can-do-ask-patient-info-phone-number()/can-go-error-treatment()/not(goal())
+
+144: can-do-human-take-control-dialog()/not(can-go-error-treatment())/not(goal())
+
+145: can-do-human-take-control-dialog()/not(can-go-error-treatment())/not(goal())
+
+146: can-call-health-agent()/not(can-go-error-treatment())/not(goal())
+
+147: not(have-patient-phone-number())/can-do-ask-patient-info-phone-number()/can-go-error-treatment()/not(goal())
+
+148: can-do-human-take-control-dialog()/not(can-go-error-treatment())/not(goal())
+
+149: not(can-go-error-treatment())/can-show-ask-user-grade()/not(goal())
+
+150: can-do-human-take-control-dialog()/not(can-go-error-treatment())/not(goal())
+
+151: not(can-go-error-treatment())/can-show-ask-user-grade()/not(goal())
+
+152: not(can-go-error-treatment())/can-show-ask-user-grade()/not(goal())
+
+153: can-do-human-take-control-dialog()/not(can-go-error-treatment())/not(goal())
+
+154: not(can-go-error-treatment())/can-show-ask-user-grade()/not(goal())
+
+155: can-finish-service()/not(goal())
+
+156: can-go-error-treatment()/can-show-ask-user-grade()/not(goal())
+
+157: not(can-go-error-treatment())/can-show-ask-user-grade()/not(goal())
+
+158: can-finish-service()/not(goal())
+
+159: can-go-error-treatment()/can-show-ask-user-grade()/not(goal())
+
+160: can-finish-service()/not(goal())
+
+161: can-go-error-treatment()/can-show-ask-user-grade()/not(goal())
+
+162: not(can-go-error-treatment())/can-show-ask-user-grade()/not(goal())
+
+163: can-finish-service()/not(goal())
+
+164: can-finish-service()/not(goal())
+
+165: can-finish-service()/not(goal())
+
+166: can-go-error-treatment()/can-show-ask-user-grade()/not(goal())
+
+167: can-finish-service()/not(goal())
+
+168: can-go-error-treatment()/can-show-ask-user-grade()/not(goal())
